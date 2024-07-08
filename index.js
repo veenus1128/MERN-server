@@ -78,7 +78,7 @@ async function StartServer(){
     })
 }
 function Test(){
-    return 0;
+    return 1;
 }
-Test();
+WebTransportBidirectionalStream();
 StartServer();
