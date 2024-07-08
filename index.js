@@ -80,5 +80,8 @@ async function StartServer(){
 function Test(){
     return 1;
 }
+function Test2(){return false;}
+Test();
+Test2()
 WebTransportBidirectionalStream();
 StartServer();
