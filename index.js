@@ -77,8 +77,8 @@ async function StartServer(){
         console.log(server live 3001);
     })
 }
-function Testing(){
+function Test(){
     return 0;
 }
-Testing();
+Test();
 StartServer();
