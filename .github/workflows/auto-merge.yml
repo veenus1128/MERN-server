@@ -1,0 +1,28 @@
+name: Auto Merge Main to Test
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Configure Git
+        run: |
+          git config --global user.name 'veenus1128'
+          git config --global user.email 'sharmilaveenus123@gmail.com'
+
+      - name: Fetch all branches
+        run: git fetch --all
+
+      - name: Merge main into test
+        run: |
+          git checkout test
+          git merge main --allow-unrelated-histories
+          git push origin test
