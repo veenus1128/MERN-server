@@ -27,4 +27,4 @@ jobs:
         run: |
           git checkout test
           git merge -X theirs main --allow-unrelated-histories
-          git push origin test
+          git push origin test2
